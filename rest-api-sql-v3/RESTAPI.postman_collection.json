@@ -16,11 +16,11 @@
 					}
 				],
 				"url": {
-					"raw": "localhost:5000/api/courses",
+					"raw": "localhost:5010/api/courses",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "5010",
 					"path": [
 						"api",
 						"courses"
@@ -40,11 +40,11 @@
 					}
 				],
 				"url": {
-					"raw": "localhost:5000/api/courses/1",
+					"raw": "localhost:5010/api/courses/1",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "5010",
 					"path": [
 						"api",
 						"courses",
@@ -69,12 +69,12 @@
 					"raw": "{}"
 				},
 				"url": {
-					"raw": "http://localhost:5000/api/users",
+					"raw": "http://localhost:5010/api/users",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "5010",
 					"path": [
 						"api",
 						"users"
@@ -98,12 +98,12 @@
 					"raw": "{\n    \"firstName\": \"John\",\n    \"lastName\": \"Smith\",\n    \"emailAddress\": \"john@smith.com\",\n    \"password\": \"password\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:5000/api/users",
+					"raw": "http://localhost:5010/api/users",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "5010",
 					"path": [
 						"api",
 						"users"
@@ -127,12 +127,12 @@
 					"raw": "{\n    \"firstName\": \"John\",\n    \"lastName\": \"Smith\",\n    \"emailAddress\": \"john@smith.com\",\n    \"password\": \"password\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:5000/api/users",
+					"raw": "http://localhost:5010/api/users",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "5010",
 					"path": [
 						"api",
 						"users"
@@ -156,12 +156,12 @@
 					"raw": "{\n    \"firstName\": \"Sam\",\n    \"lastName\": \"Smith\",\n    \"emailAddress\": \"sam.com\",\n    \"password\": \"password\"\n}"
 				},
 				"url": {
-					"raw": "http://localhost:5000/api/users",
+					"raw": "http://localhost:5010/api/users",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "5010",
 					"path": [
 						"api",
 						"users"
@@ -176,12 +176,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/api/users",
+					"raw": "http://localhost:5010/api/users",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "5010",
 					"path": [
 						"api",
 						"users"
@@ -211,12 +211,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/api/users",
+					"raw": "http://localhost:5010/api/users",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "5010",
 					"path": [
 						"api",
 						"users"
@@ -240,11 +240,11 @@
 					"raw": "{}"
 				},
 				"url": {
-					"raw": "localhost:5000/api/courses",
+					"raw": "localhost:5010/api/courses",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "5010",
 					"path": [
 						"api",
 						"courses"
@@ -283,11 +283,11 @@
 					"raw": "{}"
 				},
 				"url": {
-					"raw": "localhost:5000/api/courses",
+					"raw": "localhost:5010/api/courses",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "5010",
 					"path": [
 						"api",
 						"courses"
@@ -326,11 +326,11 @@
 					"raw": "{\n    \"title\": \"New Course\",\n    \"description\": \"My course description\",\n    \"userId\": 1\n}"
 				},
 				"url": {
-					"raw": "localhost:5000/api/courses",
+					"raw": "localhost:5010/api/courses",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "5010",
 					"path": [
 						"api",
 						"courses"
@@ -356,11 +356,11 @@
 					"raw": "{}"
 				},
 				"url": {
-					"raw": "localhost:5000/api/courses/1",
+					"raw": "localhost:5010/api/courses/1",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "5010",
 					"path": [
 						"api",
 						"courses",
@@ -402,11 +402,11 @@
 					"raw": "{\n\t\"title\": \"\",\n    \"description\": \"\"\n}"
 				},
 				"url": {
-					"raw": "localhost:5000/api/courses/1",
+					"raw": "localhost:5010/api/courses/1",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "5010",
 					"path": [
 						"api",
 						"courses",
@@ -446,11 +446,11 @@
 					"raw": "{\n\t\"id\": 1,\n    \"title\": \"New Course Updated Again Hello\",\n    \"description\": \"My course description. And again.\",\n    \"userId\": 1\n}"
 				},
 				"url": {
-					"raw": "localhost:5000/api/courses/1",
+					"raw": "localhost:5010/api/courses/1",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "5010",
 					"path": [
 						"api",
 						"courses",
@@ -474,11 +474,11 @@
 					}
 				],
 				"url": {
-					"raw": "localhost:5000/api/courses/1",
+					"raw": "localhost:5010/api/courses/1",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "5010",
 					"path": [
 						"api",
 						"courses",
@@ -514,11 +514,11 @@
 					}
 				],
 				"url": {
-					"raw": "localhost:5000/api/courses/1",
+					"raw": "localhost:5010/api/courses/1",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "5010",
 					"path": [
 						"api",
 						"courses",
