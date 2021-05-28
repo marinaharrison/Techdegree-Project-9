@@ -34,7 +34,7 @@ router.get('/', asyncHandler(async (req, res) => {
     res.json(courses); 
     res.status(200); 
   } else {
-    res.status(404).json({ message: "Courses not found." });
+    res.status(404).json({ message: "Hmm, we couln't find that course" });
   }
   }));
   
