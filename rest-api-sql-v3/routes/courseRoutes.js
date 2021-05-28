@@ -61,38 +61,42 @@ router.get('/:id', asyncHandler(async (req, res) => {
 router.post('/', authenticateUser, asyncHandler( async (req, res) => {
     try{
         const course = await Course.create(req.body);
-        res.status(201).location('api/courses' + course.id).end();
+        res.status(201)
+        .location('api/courses' + course.id)
+        .json({ message: "Course successfully created!" })
+        .end();
         } catch {
         res.status(400).json({message: 'Please provide course information.'});
     }
 }));
 
 //Send a PUT request to update a specific course
-router.put('/:id', authenticateUser, async (req, res) => {
-    try {
-        const course = await Course.findByPK(req.params.id);
-        if(course){
-            course.update = req.body;
-            await course.update(req.body);
-            res.status(204).end();
+router.put('/:id', authenticateUser, asyncHandler(async (req, res) => {
+      try {
+        course = await Course.findByPk(req.params.id);
+        await course.update(req.body);
+        res.status(204).end();
+      } catch (error) {
+        if (error.name === "SequelizeValidationError") {
+          const errors = error.errors.map(err => err.message);
+          res.status(400).json({ errors });
         } else {
-            res.status(404).json({message: "Oops! That page does not exist"});
+          throw error;
         }
-    } catch(err) {
-        res.status(500).json({message: err.message});
-    }
-});
+      }
+    })
+  );
 
 //Send a DELETE request to delete a course
-router.delete('/:id', asyncHandler (async(req, res) => {
-        const course = await Course.findByPK(req.params.id);
-    if(course) {
+router.delete('/:id', authenticateUser, asyncHandler(async (req, res, next) => {
+      const course = await Course.findByPk(req.params.id);
+      if (course) {
         await course.destroy(req.body);
         res.status(204).end();
-    } else {
-        res.status(404).json({message: "Hmm sorry, we can't find that course."});
-    }
+      } else {
+        res.status(404).json({ message: "Hmm, we can't find that course" });
+      }
     })
-);
+  );
 
 module.exports = router;
