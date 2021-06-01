@@ -62,9 +62,7 @@ router.post('/', authenticateUser, asyncHandler( async (req, res) => {
     try{
         const course = await Course.create(req.body);
         res.status(201)
-        .location('api/courses' + course.id)
-        .json({ message: "Course successfully created!" })
-        .end();
+        .location('api/courses/' + course.id).end();
         } catch {
         res.status(400).json({message: 'Please provide course information.'});
     }
@@ -72,12 +70,13 @@ router.post('/', authenticateUser, asyncHandler( async (req, res) => {
 
 //Send a PUT request to update a specific course
 router.put('/:id', authenticateUser, asyncHandler(async (req, res) => {
-      try {
+        let course;
+        try {
         course = await Course.findByPk(req.params.id);
         await course.update(req.body);
         res.status(204).end();
       } catch (error) {
-        if (error.name === "SequelizeValidationError") {
+        if (error.name === "SequelizeValidationError" || error.name === "SequelizeUniqueConstraintError") {
           const errors = error.errors.map(err => err.message);
           res.status(400).json({ errors });
         } else {
